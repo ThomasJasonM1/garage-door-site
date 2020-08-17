@@ -60,7 +60,19 @@ const useStyles = makeStyles(theme => ({
     instaStyles: {
         textDecoration: 'none',
         color: '#E1306C'
-    }
+        
+        
+    },
+    // instaIconStyles: {
+    //     color: 'transparent',
+    //     background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
+    //     round: '-webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
+    //     backgroundClip: 'text',
+    //     paddingRight: '1em',
+    //     [theme.breakpoints.down('sm')]: {
+    //         display: 'none',
+    //     },
+    // }
 }));
 
 const Footer = () => {

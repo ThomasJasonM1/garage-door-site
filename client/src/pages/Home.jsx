@@ -3,32 +3,38 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Card from "../components/Card";
+import house from '../images/house.jpg';
+import { Hidden } from '@material-ui/core';
 
 const Home = () => {
     const useStyles = makeStyles(theme => ({
-        root: {
-            // marginTop: '1em',
+        homeRoot: {
+            // flexGrow: 1,
+            background: `url(${house}) no-repeat center center fixed`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            height: '100vh',
+            //overflow: 'hidden',
+            position: 'fixed',
         },
-        gridStyles: {
-            flexGrow: 1,
-        },
+        homeRoot1: {},
         subGridStyles: {
-            // height: '90vh',
-            marginTop: '15%',
+            marginTop: '0px',
+            paddingTop: '12%',
             [theme.breakpoints.down('md')]: {
-                marginTop: '1em',
+                paddingTop: '0px',
             },
         },
     }));
     const classes = useStyles();
 
     return (
-        <Container className={classes.gridStyles} spacing={2}>
-            <Container maxWidth="false" disableGutters>
+        <Container maxWidth="xl" className={classes.homeRoot} spacing={2}>
+            <Container maxWidth="xl" disableGutters>
             {/* item sm={'auto'} > */}
                 <Grid container justify="center" spacing={7} className={classes.subGridStyles} alignContent='center'> 
                     <Grid key='Repairs' item>
-                        <Card className={classes.root}
+                        <Card className={classes.homeRoot1}
                             
                             categoryTitle="Repairs"
                             description="Garage door repairs are never fun and often very inconvenient. 
@@ -38,7 +44,7 @@ const Home = () => {
                         /> 
                     </Grid>
                     <Grid key='New' item>
-                        <Card className={classes.root}
+                        <Card className={classes.homeRoot1}
                             
                             categoryTitle="New Doors"
                             description="New garage doors can add an huge curn appeal to your home.
@@ -48,7 +54,7 @@ const Home = () => {
                         /> 
                     </Grid>
                     <Grid key='New' item>
-                        <Card className={classes.root}
+                        <Card className={classes.homeRoot1}
                             
                             categoryTitle="Openers"
                             description="Modern openers are much more quite and most models will even 
